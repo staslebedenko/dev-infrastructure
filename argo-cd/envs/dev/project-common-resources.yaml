@@ -1,18 +1,14 @@
 apiVersion: argoproj.io/v1alpha1  
-kind: Application  
+kind: AppProject  
 metadata:  
   name: common-resources  
   namespace: argocd  
 spec:  
-  project: common-resources  
-  source:  
-    repoURL: https://github.com/staslebedenko/dev-infrastructure.git  
-    targetRevision: HEAD  
-    path: apps/common/base  
-  destination:  
-    server: https://kubernetes.default.svc  
-    namespace: default  
-  syncPolicy:  
-    automated:  
-      prune: false  
-      selfHeal: true  
+  sourceRepos:  
+    - https://github.com/staslebedenko/dev-infrastructure.git  
+  destinations:  
+    - namespace: "*"  
+      server: https://kubernetes.default.svc  
+  clusterResourceWhitelist:  
+    - group: "*"  
+      kind: "*"  
