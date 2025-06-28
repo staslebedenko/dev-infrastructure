@@ -1,6 +1,0 @@
-# root/apps/frontend/envs/dev/service.yaml
-apiVersion: v1  
-kind: Service  
-metadata:  
-  name: frontend  
-  namespace: devbcn  
