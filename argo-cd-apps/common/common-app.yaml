@@ -18,4 +18,4 @@ spec:
   syncPolicy:  
     automated:  
       prune: false                   # Be careful with pruning namespaces!  
-      selfHeal: true  
+      selfHeal: false  
