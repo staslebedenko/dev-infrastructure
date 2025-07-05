@@ -1,8 +1,0 @@
-# argo-cd/envs/dev/argocd-cm-patch.yaml 
-apiVersion: v1  
-kind: ConfigMap  
-metadata:  
-  name: argocd-cm  
-  namespace: argocd  
-data:  
-  accounts.devbcn-user: apiKey, login 
